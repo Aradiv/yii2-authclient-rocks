@@ -1,0 +1,21 @@
+{
+	"name": "aradiv/yii2-authclient-rocks",
+	"description": "Authclient for enl.rocks",
+	"type": "yii2-extension",
+	"keywords": ["yii2","extension"," enl.rocks","oauth2"],
+	"license": "BSD-3-Clause",
+    "require": {
+        "yiisoft/yii2-authclient": "^2.0"
+    },
+    "authors": [
+        {
+            "name": "Aradiv",
+            "email": "develop@aradiv.de"
+        }
+    ],
+	"autoload": {
+        "psr-4": {
+            "aradiv\\authclient\\": ""
+        }
+    }
+}
