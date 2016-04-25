@@ -1,6 +1,6 @@
 <?php
 
-namespace aradiv\authclient\clients;
+namespace aradiv\authclientrocks\clients;
 
 use yii\authclient\OAuth2;
 
@@ -19,6 +19,15 @@ class RocksOAuth extends OAuth2
      */
     public $apiBaseUrl = 'https://enlightened.rocks/api/1.0/';
 
+	public function init()
+    {
+        parent::init();
+        if ($this->scope === null) {
+            $this->scope = implode(' ', [
+                'userinfo',
+            ]);
+        }
+    }
     protected function defaultName()
     {
         return 'rocks';
