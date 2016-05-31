@@ -1,10 +1,10 @@
 <?php
 
-namespace aradiv\authclientrocks\clients;
+namespace aradiv\authclient\rocks;
 
 use yii\authclient\OAuth2;
 
-class RocksOAuth extends OAuth2
+class Client extends OAuth2
 {
 	    /**
      * @inheritdoc
