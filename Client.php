@@ -19,6 +19,13 @@ class Client extends OAuth2
      */
     public $apiBaseUrl = 'https://enlightened.rocks/api/1.0/';
 
+    public function __construct($config=[]){
+        if(!isset($config['css']) || $config['css']===true) {
+            \Yii::setAlias('@aradiv\authclient\rocks\assets', __DIR__ . "/assets");
+            RocksAsset::register(\Yii::$app->view);
+        }
+        parent::__construct($config);
+    }
 	public function init()
     {
         parent::init();
